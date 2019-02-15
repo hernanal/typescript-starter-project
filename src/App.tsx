@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './App.css';
-
+import Hello from './components/Hello';
 import logo from './logo.svg';
 
 class App extends React.Component {
@@ -12,7 +12,7 @@ class App extends React.Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
+          <Hello name="World" enthusiasmLevel={10} />
         </p>
       </div>
     );
