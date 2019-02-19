@@ -1,16 +1,15 @@
 import * as React from 'react';
-import { func } from 'prop-types';
 
 export interface IStatefulProps {
     name: string;
     enthusiasmLevel?: number;
 }
 
-interface State {
+interface IState {
     currentEnthusiasm: number;
 }
 
-class Hello extends React.Component<IStatefulProps, State> {
+class Hello extends React.Component<IStatefulProps, IState> {
     constructor(props: IStatefulProps) {
         super(props);
         this.state = { currentEnthusiasm: props.enthusiasmLevel || 1 };
@@ -37,7 +36,7 @@ class Hello extends React.Component<IStatefulProps, State> {
         );
     }
 
-    updateEnthusiasmLevel(currentEnthusiasm: number) {
+    private updateEnthusiasmLevel(currentEnthusiasm: number) {
         this.setState({ currentEnthusiasm })
     }
 }
