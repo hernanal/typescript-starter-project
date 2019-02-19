@@ -1,5 +1,5 @@
 import * as React from 'react';
-import '../index.scss';
+import styles from '../index.scss';
 
 export interface IHelloProps {
     name: string;
@@ -14,7 +14,7 @@ function Hello({ name, enthusiasmLevel = 1, onIncrement, onDecrement }: IHelloPr
     }
 
     return (
-        <div className="hello">
+        <div className={styles.hello}>
             <div className="greeting">
                 Hello {name + getExclamationMarks(enthusiasmLevel)}
             </div>
