@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { EnthusiasmAction } from './actions/index';
 import Hello from './containers/Hello';
-import './index.css';
+import './index.scss';
 import { enthusiasm } from './reducers/index';
 import { IStoreState } from './types/index';
 
