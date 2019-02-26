@@ -17,14 +17,15 @@ it('renders the correct text with an explicit enthusiasm level of 5', () => {
     expect(hello.find(".greeting").text()).toEqual('Hello Alex!!!!!');
 });
 
-it('throws when the enthusiasm level is 0', () => {
+it('throws error when the enthusiasm level is 0', () => {
     expect(() => {
         enzyme.shallow(<Hello name='Alex' enthusiasmLevel={0} />);
     }).toThrow();
 });
 
-it('throws when the enthusiasm level is negative', () => {
+it('throws error when the enthusiasm level is negative', () => {
     expect(() => {
         enzyme.shallow(<Hello name='Alex' enthusiasmLevel={-1} />);
     }).toThrow();
 });
+
