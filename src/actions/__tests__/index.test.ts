@@ -1,4 +1,4 @@
-import * as constants from '../../constants/index';
+import * as constants from 'constants/index';
 import { decrementEnthusiasm, IDecrementEnthusiasm, incrementEnthusiasm, IncrementEnthusiasm} from '../index';
 
 describe('decrementEnthusiasm', () => {

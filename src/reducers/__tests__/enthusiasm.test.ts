@@ -1,6 +1,6 @@
-import { EnthusiasmAction } from '../../actions';
-import * as constants from '../../constants/index';
-import { enthusiasm } from '../index';
+import { EnthusiasmAction } from 'actions';
+import * as constants from 'constants/index';
+import { enthusiasm } from 'reducers/index';
 
 it('handles actions of type DECREMENT_ENTHUSIASM', () => {
     const action: EnthusiasmAction = {
