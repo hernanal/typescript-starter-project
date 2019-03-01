@@ -4,7 +4,7 @@ import "index.scss";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { enthusiasm } from "reducers/index";
+import enthusiasm from "reducers/enthusiasm";
 import { createStore } from "redux";
 import { IStoreState } from "types/index";
 
