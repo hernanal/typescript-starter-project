@@ -1,5 +1,5 @@
+import 'index.scss';
 import * as React from 'react';
-import '../index.scss';
 
 export interface IHelloProps {
     name: string;
@@ -19,8 +19,8 @@ function Hello({ name, enthusiasmLevel = 1, onIncrement, onDecrement }: IHelloPr
                 Hello {name + getExclamationMarks(enthusiasmLevel)}
             </div>
             <div className="hello button">
-                <button onClick={onDecrement}>-</button>
-                <button onClick={onIncrement}>+</button>
+                <button id="decrement-btn" onClick={onDecrement}>-</button>
+                <button id="increment-btn" onClick={onIncrement}>+</button>
             </div>
         </div>
     );
