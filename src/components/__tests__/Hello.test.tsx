@@ -59,10 +59,32 @@ describe("Hello container", () => {
   });
 
   describe("decrement button", () => {
-    it("decreases the enthusiasm level", () => {
+    beforeEach(() => {
       wrappedComponent.find("#decrement-btn").simulate("click");
       wrappedComponent.update();
+    });
+    
+    it("decreases the enthusiasm level", () => {
       expect(wrappedComponent.find('Hello').prop('enthusiasmLevel')).toEqual(1);
+    });
+
+    it('displays the correct greeting', () => {
+      expect(wrappedComponent.find('.greeting').text()).toEqual("Hello TypeScript!");
+    });
+  });
+
+  describe("increment button", () => {
+    beforeEach(() => {
+      wrappedComponent.find("#increment-btn").simulate("click");
+      wrappedComponent.update();
+    });
+    
+    it("increases the enthusiasm level", () => {
+      expect(wrappedComponent.find('Hello').prop('enthusiasmLevel')).toEqual(3);
+    });
+
+    it('displays the correct greeting', () => {
+      expect(wrappedComponent.find('.greeting').text()).toEqual("Hello TypeScript!!!");
     });
   });
 });
